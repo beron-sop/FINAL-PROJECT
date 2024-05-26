@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists in HTML</title>
+</head>
+<body>
+    <h1>Lists</h1>
+    <p>Humans are natural list makers, and HTML provides elements for marking up three types of lists:</p>
+    <ol>
+        <li>Unordered lists. Collections of items that appear in no particular order</li>
+        <li>Ordered lists. Lists in which the sequence of the items is important</li>
+        <li>Description lists. Lists that consist of name and value pairs, including but not limited to terms and definitions.</li>
+    </ol>
+
+    <h2>Unordered Lists</h2>
+    <p>Identify an unordered list, mark it up as a <code>&lt;ul&gt;</code> element. The opening tag goes before the first list item, and the closing tag <code>&lt;/ul&gt;</code> goes after the last item. Then, each item in the list gets marked up as a list item (<code>&lt;li&gt;</code>) by enclosing it in opening and closing li tags, as shown in this example. Notice that there are no bullets in the source document. They are added automatically by the browser. For example:</p>
+    <ul>
+        <li>Fruits
+            <ul>
+                <li>Mango</li>
+                <li>Apple</li>
+                <li>Pineapple</li>
+            </ul>
+        </li>
+        <li>Vegetables
+            <ul>
+                <li>Cabbage</li>
+                <li>Lettuce</li>
+                <li>Carrot</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Ordered Lists</h2>
+    <p>Ordered lists are for items that occur in a particular order, such as step by step instructions or driving directions. They work just like the unordered lists described earlier, except they are defined with the <code>&lt;ol&gt;</code> element (for ordered list, of course). Instead of bullets, the browser automatically inserts numbers before ordered list items, so you don't need to number them in the source document. This makes it easy to rearrange list items without renumbering them. For example:</p>
+    <p>After reading this INFORMATION, YOU MUST be able to:</p>
+    <ol>
+        <li>Demonstrate entering contents</li>
+        <li>Identify the steps of marking up a simple web page</li>
+        <li>Use text editors</li>
+    </ol>
+
+    <h2>Description Lists</h2>
+    <p>Description lists are used for any type of name/value pairs, such as terms and their definitions, questions and answers, or other types of terms and their associated information. Their structure is a bit different from the other two lists that we just discussed. The whole description list is marked up as a <code>&lt;dl&gt;</code> element. The content of a <code>&lt;dl&gt;</code> is some number of <code>&lt;dt&gt;</code> elements indicating the names and <code>&lt;dd&gt;</code> elements for their respective values. I find it helpful to think of them as "terms" (to remember the "t" in <code>&lt;dt&gt;</code>) and "definition" (for the "d" in <code>&lt;dd&gt;</code>), even though that is only one use of description lists in HTML5. For example:</p>
+    <dl>
+        <dt><a href="#">beginPath()</a></dt>
+        <dd>Creates a new path. Once created, future drawing commands are directed into the path and used to build the path up.</dd>
+        <dt><a href="#">Path methods()</a></dt>
+        <dd>Methods to set different paths for objects</dd>
+        <dt><a href="#">closePath()</a></dt>
+        <dd>Adds a straight line to the path, going to the current sub-path.</dd>
+    </dl>
+</body>
+</html>

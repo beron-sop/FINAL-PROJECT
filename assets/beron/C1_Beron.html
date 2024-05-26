@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Drawing</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="200" height="200"></canvas>
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Colors
+        const yellow = 'rgba(255, 204, 102, 0.8)'; // Yellow with transparency
+        const brown = '#996633';
+        const black = '#000000';
+
+        // Set canvas background color
+        ctx.fillStyle = 'white';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        // Draw brown square in the middle
+        ctx.fillStyle = brown;
+        ctx.fillRect(50, 50, 100, 100);
+
+        // Draw yellow squares with transparency
+        ctx.fillStyle = yellow;
+        ctx.fillRect(0, 0, 95, 95);   // Top-left
+        ctx.fillRect(105, 0, 95, 95); // Top-right
+        ctx.fillRect(0, 105, 95, 95); // Bottom-left
+        ctx.fillRect(105, 105, 95, 95); // Bottom-right
+
+        // Draw black cross over the brown square
+        ctx.fillStyle = black;
+        ctx.fillRect(95, 50, 10, 100); // Vertical bar
+        ctx.fillRect(50, 95, 100, 10); // Horizontal bar
+    </script>
+</body>
+</html>
